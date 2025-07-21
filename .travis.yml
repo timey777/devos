@@ -1,0 +1,16 @@
+language: c
+dist: trusty
+
+sudo: required
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install nasm
+  - sudo apt install llvm/clang
+
+compiler:
+  - nasm
+  - clang
+
+script:
+  - make
